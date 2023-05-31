@@ -1,7 +1,7 @@
 {
   "name": "lineone",
   "version": "1.4.1",
-  "description": "Multipurpose Admin UI Kit based on Tailwind CSS",
+  "description": "task manager system",
   "main": "index.js",
   "scripts": {
     "start": "npm run prod && npm run hot",
