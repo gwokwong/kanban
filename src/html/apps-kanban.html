@@ -3661,7 +3661,7 @@
                           <h3
                             class="font-medium text-slate-700 dark:text-navy-100"
                           >
-                            Notifications
+                            通知
                           </h3>
                           <div
                             class="badge h-5 rounded-full bg-primary/10 px-1.5 text-primary dark:bg-accent-light/15 dark:text-accent-light"
@@ -3703,28 +3703,28 @@
                           @click="activeTab = 'tabAll'"
                           class="btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5"
                         >
-                          <span>All</span>
+                          <span>全部</span>
                         </button>
                         <button
                           :class="activeTab === 'tabAlerts' ? 'border-primary dark:border-accent text-primary dark:text-accent-light' : 'border-transparent hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100'"
                           @click="activeTab = 'tabAlerts'"
                           class="btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5"
                         >
-                          <span>Alerts</span>
+                          <span>告警</span>
                         </button>
                         <button
                           :class="activeTab === 'tabEvents' ? 'border-primary dark:border-accent text-primary dark:text-accent-light' : 'border-transparent hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100'"
                           @click="activeTab = 'tabEvents'"
                           class="btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5"
                         >
-                          <span>Events</span>
+                          <span>事件</span>
                         </button>
                         <button
                           :class="activeTab === 'tabLogs' ? 'border-primary dark:border-accent text-primary dark:text-accent-light' : 'border-transparent hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100'"
                           @click="activeTab = 'tabLogs'"
                           class="btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5"
                         >
-                          <span>Logs</span>
+                          <span>日志</span>
                         </button>
                       </div>
                     </div>
@@ -5055,6 +5055,7 @@
                     进行中
                   </h3>
                 </div>
+
 
                 <div
                   @click.outside="isShowPopper && (isShowPopper = false)"
@@ -6427,7 +6428,7 @@
               <button
                 class="btn w-full bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
               >
-                New Board
+                添加任务列表
               </button>
             </div>
           </div>
