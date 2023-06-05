@@ -4,27 +4,19 @@
     <!-- Meta tags  -->
     <meta charset="UTF-8"/>
     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-            name="viewport"
-    />
-
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport"/>
     <title>任务管理系统 - 看板</title>
     <link href="images/favicon.png" rel="icon" type="image/png"/>
-
     <!-- CSS Assets -->
     <link href="css/app.css" rel="stylesheet"/>
-
     <!-- Javascript Assets -->
     <script defer src="js/app.js"></script>
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-            rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"/>
     <script>
         /**
          * THIS SCRIPT REQUIRED FOR PREVENT FLICKERING IN SOME BROWSERS
@@ -34,83 +26,59 @@
     </script>
 </head>
 
-<body
-        class="has-min-sidebar is-sidebar-open is-header-blur"
-        x-bind="$store.global.documentBody"
-        x-data
->
+<body class="has-min-sidebar is-sidebar-open is-header-blur" x-bind="$store.global.documentBody" x-data>
 <!-- App preloader-->
-<div
-        class="app-preloader fixed z-50 grid h-full w-full place-content-center bg-slate-50 dark:bg-navy-900"
->
+<div class="app-preloader fixed z-50 grid h-full w-full place-content-center bg-slate-50 dark:bg-navy-900">
     <div class="app-preloader-inner relative inline-block h-48 w-48"></div>
 </div>
 
 <!-- Page Wrapper -->
-<div
-        class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900"
-        id="root"
-        x-cloak
->
+<div class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900" id="root" x-cloak >
     <!-- Sidebar -->
     <div class="sidebar print:hidden">
         <!-- Main Sidebar -->
         <div class="main-sidebar">
-            <div
-                    class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-white dark:border-navy-700 dark:bg-navy-800"
+            <div class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-white dark:border-navy-700 dark:bg-navy-800"
             >
                 <!-- Application Logo -->
                 <div class="flex pt-4">
                     <a href="/">
-                        <img
-                                alt="logo"
-                                class="h-11 w-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
-                                src="images/app-logo.svg"
-                        />
+                        <img alt="logo" class="h-11 w-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
+                                src="images/app-logo.svg"/>
                     </a>
                 </div>
 
                 <!-- Main Sections Links -->
-                <div
-                        class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6"
-                >
+                <div class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6">
                     <!-- Dashobards -->
-                    <a
-                            class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+                    <a class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                             href="dashboards-crm-analytics.html"
-                            x-tooltip.placement.right="'Dashboards'"
-                    >
-                        <svg
-                                class="h-7 w-7"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M5 14.059c0-1.01 0-1.514.222-1.945.221-.43.632-.724 1.453-1.31l4.163-2.974c.56-.4.842-.601 1.162-.601.32 0 .601.2 1.162.601l4.163 2.974c.821.586 1.232.88 1.453 1.31.222.43.222.935.222 1.945V19c0 .943 0 1.414-.293 1.707C18.414 21 17.943 21 17 21H7c-.943 0-1.414 0-1.707-.293C5 20.414 5 19.943 5 19v-4.94Z"
-                                    fill="currentColor"
-                                    fill-opacity=".3"
-                            />
-                            <path
-                                    d="M3 12.387c0 .267 0 .4.084.441.084.041.19-.04.4-.204l7.288-5.669c.59-.459.885-.688 1.228-.688.343 0 .638.23 1.228.688l7.288 5.669c.21.163.316.245.4.204.084-.04.084-.174.084-.441v-.409c0-.48 0-.72-.102-.928-.101-.208-.291-.355-.67-.65l-7-5.445c-.59-.459-.885-.688-1.228-.688-.343 0-.638.23-1.228.688l-7 5.445c-.379.295-.569.442-.67.65-.102.208-.102.448-.102.928v.409Z"
-                                    fill="currentColor"
-                            />
-                            <path
-                                    d="M11.5 15.5h1A1.5 1.5 0 0 1 14 17v3.5h-4V17a1.5 1.5 0 0 1 1.5-1.5Z"
-                                    fill="currentColor"
-                            />
-                            <path
-                                    d="M17.5 5h-1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5Z"
-                                    fill="currentColor"
-                            />
-                        </svg>
+                            x-tooltip.placement.right="'Dashboards'">
+<!--                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <path-->
+<!--                                    d="M5 14.059c0-1.01 0-1.514.222-1.945.221-.43.632-.724 1.453-1.31l4.163-2.974c.56-.4.842-.601 1.162-.601.32 0 .601.2 1.162.601l4.163 2.974c.821.586 1.232.88 1.453 1.31.222.43.222.935.222 1.945V19c0 .943 0 1.414-.293 1.707C18.414 21 17.943 21 17 21H7c-.943 0-1.414 0-1.707-.293C5 20.414 5 19.943 5 19v-4.94Z"-->
+<!--                                    fill="currentColor"-->
+<!--                                    fill-opacity=".3"-->
+<!--                            />-->
+<!--                            <path-->
+<!--                                    d="M3 12.387c0 .267 0 .4.084.441.084.041.19-.04.4-.204l7.288-5.669c.59-.459.885-.688 1.228-.688.343 0 .638.23 1.228.688l7.288 5.669c.21.163.316.245.4.204.084-.04.084-.174.084-.441v-.409c0-.48 0-.72-.102-.928-.101-.208-.291-.355-.67-.65l-7-5.445c-.59-.459-.885-.688-1.228-.688-.343 0-.638.23-1.228.688l-7 5.445c-.379.295-.569.442-.67.65-.102.208-.102.448-.102.928v.409Z"-->
+<!--                                    fill="currentColor"-->
+<!--                            />-->
+<!--                            <path-->
+<!--                                    d="M11.5 15.5h1A1.5 1.5 0 0 1 14 17v3.5h-4V17a1.5 1.5 0 0 1 1.5-1.5Z"-->
+<!--                                    fill="currentColor"-->
+<!--                            />-->
+<!--                            <path-->
+<!--                                    d="M17.5 5h-1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5Z"-->
+<!--                                    fill="currentColor"-->
+<!--                            />-->
+<!--                        </svg>-->
+
+                        <img class="h-7 w-7" src="images/menu/dashobards.svg" alt="Dashobards"/>
                     </a>
 
                     <!--文件-->
-
-
-                    <a
-                            class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+                    <a class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                             href="apps-filemanager.html"
                             x-tooltip.placement.right="'文件'"
                     >
@@ -176,37 +144,39 @@
                     </a>
 
 
-                    <!--项目管理-->
+                    <!--项目管理 看板-->
 
-                    <a
-                            class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-                            href="apps-kanban.html"
-                            x-tooltip.placement.right="'项目'"
-                    >
-                        <svg
-                                class="h-7 w-7"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M5 14.059c0-1.01 0-1.514.222-1.945.221-.43.632-.724 1.453-1.31l4.163-2.974c.56-.4.842-.601 1.162-.601.32 0 .601.2 1.162.601l4.163 2.974c.821.586 1.232.88 1.453 1.31.222.43.222.935.222 1.945V19c0 .943 0 1.414-.293 1.707C18.414 21 17.943 21 17 21H7c-.943 0-1.414 0-1.707-.293C5 20.414 5 19.943 5 19v-4.94Z"
-                                    fill="currentColor"
-                                    fill-opacity=".3"
-                            />
-                            <path
-                                    d="M3 12.387c0 .267 0 .4.084.441.084.041.19-.04.4-.204l7.288-5.669c.59-.459.885-.688 1.228-.688.343 0 .638.23 1.228.688l7.288 5.669c.21.163.316.245.4.204.084-.04.084-.174.084-.441v-.409c0-.48 0-.72-.102-.928-.101-.208-.291-.355-.67-.65l-7-5.445c-.59-.459-.885-.688-1.228-.688-.343 0-.638.23-1.228.688l-7 5.445c-.379.295-.569.442-.67.65-.102.208-.102.448-.102.928v.409Z"
-                                    fill="currentColor"
-                            />
-                            <path
-                                    d="M11.5 15.5h1A1.5 1.5 0 0 1 14 17v3.5h-4V17a1.5 1.5 0 0 1 1.5-1.5Z"
-                                    fill="currentColor"
-                            />
-                            <path
-                                    d="M17.5 5h-1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5Z"
-                                    fill="currentColor"
-                            />
-                        </svg>
+                    <a class=" flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:text-accent-light dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
+                       href="apps-kanban.html"
+                            x-tooltip.placement.right="'看板'">
+
+                        <img class="h-7 w-7" src="images/menu/kanban.svg" alt="kanban"/>
+
+
+<!--                        <svg-->
+<!--                                class="h-7 w-7"-->
+<!--                                fill="none"-->
+<!--                                viewBox="0 0 24 24"-->
+<!--                                xmlns="http://www.w3.org/2000/svg"-->
+<!--                        >-->
+<!--                            <path-->
+<!--                                    d="M5 14.059c0-1.01 0-1.514.222-1.945.221-.43.632-.724 1.453-1.31l4.163-2.974c.56-.4.842-.601 1.162-.601.32 0 .601.2 1.162.601l4.163 2.974c.821.586 1.232.88 1.453 1.31.222.43.222.935.222 1.945V19c0 .943 0 1.414-.293 1.707C18.414 21 17.943 21 17 21H7c-.943 0-1.414 0-1.707-.293C5 20.414 5 19.943 5 19v-4.94Z"-->
+<!--                                    fill="currentColor"-->
+<!--                                    fill-opacity=".3"-->
+<!--                            />-->
+<!--                            <path-->
+<!--                                    d="M3 12.387c0 .267 0 .4.084.441.084.041.19-.04.4-.204l7.288-5.669c.59-.459.885-.688 1.228-.688.343 0 .638.23 1.228.688l7.288 5.669c.21.163.316.245.4.204.084-.04.084-.174.084-.441v-.409c0-.48 0-.72-.102-.928-.101-.208-.291-.355-.67-.65l-7-5.445c-.59-.459-.885-.688-1.228-.688-.343 0-.638.23-1.228.688l-7 5.445c-.379.295-.569.442-.67.65-.102.208-.102.448-.102.928v.409Z"-->
+<!--                                    fill="currentColor"-->
+<!--                            />-->
+<!--                            <path-->
+<!--                                    d="M11.5 15.5h1A1.5 1.5 0 0 1 14 17v3.5h-4V17a1.5 1.5 0 0 1 1.5-1.5Z"-->
+<!--                                    fill="currentColor"-->
+<!--                            />-->
+<!--                            <path-->
+<!--                                    d="M17.5 5h-1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5Z"-->
+<!--                                    fill="currentColor"-->
+<!--                            />-->
+<!--                        </svg>-->
                     </a>
 
                     <!-- Apps -->
@@ -446,12 +416,10 @@
                                     </div>
                                 </div>
                                 <div class="flex flex-col pt-2 pb-5">
-                                    <a
-                                            class="group flex items-center space-x-3 py-2 px-4 tracking-wide outline-none transition-all hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-navy-600 dark:focus:bg-navy-600"
+                                    <a class="group flex items-center space-x-3 py-2 px-4 tracking-wide outline-none transition-all hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-navy-600 dark:focus:bg-navy-600"
                                             href="#"
                                     >
-                                        <div
-                                                class="flex h-8 w-8 items-center justify-center rounded-lg bg-warning text-white"
+                                        <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-warning text-white"
                                         >
                                             <svg
                                                     class="h-4.5 w-4.5"
@@ -1747,19 +1715,13 @@
 
                                 <p class="mt-0.5 text-tiny+ uppercase">已完成任务</p>
 
-                                <div
-                                        class="progress mt-3 h-1.5 bg-success/15 dark:bg-success/25"
-                                >
-                                    <div
-                                            class="relative w-6/12 overflow-hidden rounded-full bg-success"
-                                    ></div>
+                                <div class="progress mt-3 h-1.5 bg-success/15 dark:bg-success/25">
+                                    <div class="relative w-6/12 overflow-hidden rounded-full bg-success"></div>
                                 </div>
 
-                                <div
-                                        class="mt-1.5 flex items-center justify-between text-xs text-slate-400 dark:text-navy-300"
+                                <div class="mt-1.5 flex items-center justify-between text-xs text-slate-400 dark:text-navy-300"
                                 >
-                                    <button
-                                            class="btn -ml-1 h-6 w-6 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+                                    <button class="btn -ml-1 h-6 w-6 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                                     >
                                         <svg
                                                 class="h-4 w-4"
@@ -1788,14 +1750,12 @@
                     </div>
 
                     <div class="mt-4">
-                        <h2
-                                class="px-3 text-xs+ font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
+                        <h2 class="px-3 text-xs+ font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
                         >
                             最新动态
                         </h2>
                         <div class="mt-3 space-y-3 px-2">
-                            <div
-                                    class="flex justify-between space-x-2 rounded-lg bg-slate-100 p-2.5 dark:bg-navy-700"
+                            <div class="flex justify-between space-x-2 rounded-lg bg-slate-100 p-2.5 dark:bg-navy-700"
                             >
                                 <div class="flex flex-1 flex-col justify-between">
                                     <div class="line-clamp-2">
@@ -5422,18 +5382,12 @@
                     </div>
                 </div>
 
-                <div
-                        class="board-draggable relative flex max-h-full w-72 shrink-0 flex-col"
-                >
-                    <div
-                            class="board-draggable-handler flex items-center justify-between px-0.5 pb-3"
-                    >
+                <div class="board-draggable relative flex max-h-full w-72 shrink-0 flex-col">
+                    <div class="board-draggable-handler flex items-center justify-between px-0.5 pb-3">
                         <div class="flex items-center space-x-2">
-                            <div
-                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-warning/10 text-warning"
+                            <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-warning/10 text-warning"
                             >
-                                <svg
-                                        class="h-5 w-5"
+                                <svg class="h-5 w-5"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -7176,17 +7130,11 @@
     </div>
 </div>
 
-
-
-
 <!--
         This is a place for Alpine.js Teleport feature
         @see https://alpinejs.dev/directives/teleport
       -->
 <div id="x-teleport-target"></div>
-
-
-
 <script>
     window.addEventListener("DOMContentLoaded", () => Alpine.start());
 </script>
